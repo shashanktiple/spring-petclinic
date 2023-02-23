@@ -185,8 +185,8 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/x
         </executions>
       </plugin>
       <plugin>
-       <!-- <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-maven-plugin</artifactId> -->
+       <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
         <executions>
           <execution>
             <!-- Spring Boot Actuator displays build-related information
