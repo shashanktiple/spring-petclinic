@@ -227,7 +227,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/x
 
       <!-- Spring Boot Actuator displays build-related information if a git.properties
         file is present at the classpath -->
-      <plugin>
+      <!-- <plugin>
         <groupId>pl.project13.maven</groupId>
         <artifactId>git-commit-id-plugin</artifactId>
         <executions>
@@ -245,7 +245,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/x
           </generateGitPropertiesFilename>
           <failOnNoGitDirectory>false</failOnNoGitDirectory>
         </configuration>
-      </plugin>
+      </plugin> -->
 
       <plugin>
         <groupId>ro.isdc.wro4j</groupId>
@@ -279,8 +279,22 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/x
           </dependency>
         </dependencies>
       </plugin>
+      <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-dependency-plugin</artifactId>
+          <version>2.4</version>
+          <executions>
+          <execution>
+          <id>copy-dependencies</id>
+          <phase>package</phase>
+          <goals><goal>copy-dependencies</goal></goals>
+          </execution>
+          </executions>
+      </plugin>
     </plugins>
   </build>
+
+
 
   <!-- Apache 2 license -->
   <licenses>
